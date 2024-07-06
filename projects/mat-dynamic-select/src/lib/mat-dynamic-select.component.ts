@@ -8,6 +8,13 @@ import { LookupItem } from './lookup-item';
   selector: 'app-mat-dynamic-select',
   standalone: true,
   imports: [],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => MatDynamicSelectComponent),
+      multi: true
+    }
+  ],
   template: `
    <ng-container [formGroup]="form">
     <mat-form-field fxFlex="auto" [appearance]="appearance" [class]="class">   
