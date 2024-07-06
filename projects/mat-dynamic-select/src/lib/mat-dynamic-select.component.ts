@@ -42,7 +42,9 @@ import { LookupItem } from './lookup-item';
     </mat-form-field>
 </ng-container>
   `,
-  styles: ``
+  styles: `.mat-form-field {
+    overflow: hidden!important;
+}`
 })
 export class MatDynamicSelectComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges, ControlValueAccessor {
 
